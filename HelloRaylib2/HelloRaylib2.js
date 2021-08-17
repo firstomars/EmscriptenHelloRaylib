@@ -32,8 +32,8 @@ var Module = typeof Module !== 'undefined' ? Module : {};
         // web worker
         PACKAGE_PATH = encodeURIComponent(location.pathname.toString().substring(0, location.pathname.toString().lastIndexOf('/')) + '/');
       }
-      var PACKAGE_NAME = '../../../bin/Emscripten/HelloRaylib/HelloRaylib.data';
-      var REMOTE_PACKAGE_BASE = 'HelloRaylib.data';
+      var PACKAGE_NAME = '../../../bin/Emscripten/HelloRaylib2/HelloRaylib2.data';
+      var REMOTE_PACKAGE_BASE = 'HelloRaylib2.data';
       if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
         Module['locateFile'] = Module['locateFilePackage'];
         err('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -173,10 +173,10 @@ var Module = typeof Module !== 'undefined' ? Module : {};
             for (var i = 0; i < files.length; ++i) {
               DataRequest.prototype.requests[files[i].filename].onload();
             }
-                Module['removeRunDependency']('datafile_../../../bin/Emscripten/HelloRaylib/HelloRaylib.data');
+                Module['removeRunDependency']('datafile_../../../bin/Emscripten/HelloRaylib2/HelloRaylib2.data');
 
       };
-      Module['addRunDependency']('datafile_../../../bin/Emscripten/HelloRaylib/HelloRaylib.data');
+      Module['addRunDependency']('datafile_../../../bin/Emscripten/HelloRaylib2/HelloRaylib2.data');
     
       if (!Module.preloadResults) Module.preloadResults = {};
     
@@ -197,7 +197,7 @@ var Module = typeof Module !== 'undefined' ? Module : {};
     }
   
    }
-   loadPackage({"files": [{"filename": "/assets/.gitkeep", "start": 0, "end": 0}], "remote_package_size": 0, "package_uuid": "aed8339c-7df6-4095-9bde-0932b0728f0a"});
+   loadPackage({"files": [{"filename": "/assets/.gitkeep", "start": 0, "end": 0}], "remote_package_size": 0, "package_uuid": "187bb138-42e9-4283-870c-2ce6a7b71656"});
   
   })();
   
@@ -1732,7 +1732,7 @@ function createExportWrapper(name, fixedasm) {
 }
 
 var wasmBinaryFile;
-  wasmBinaryFile = 'HelloRaylib.wasm';
+  wasmBinaryFile = 'HelloRaylib2.wasm';
   if (!isDataURI(wasmBinaryFile)) {
     wasmBinaryFile = locateFile(wasmBinaryFile);
   }
