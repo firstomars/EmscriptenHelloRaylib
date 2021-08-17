@@ -30,7 +30,7 @@ endif()
 # =============================================================================
 add_subdirectory ("projects/HelloRaylib")
 add_subdirectory ("projects/TicTacToe")
-
+add_subdirectory ("projects/HelloRaylib2")
 # TODO: add any additional sub projects here!
 
 # =============================================================================
